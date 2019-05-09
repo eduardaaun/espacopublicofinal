@@ -1,0 +1,1819 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.nav-bar-map{
+  overflow: hidden;
+  background: transparent;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 40000;
+  right: 0;
+  padding: 14px 16px;
+}
+
+.nav-bar {
+  overflow: hidden;
+  background-color: white;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 3000;
+  right: 0;
+  padding: 14px 16px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+li {
+  float: right;
+  padding: 8px;
+}
+
+li a {
+  border-style: solid;
+    display: block;
+    color: #B10CFF;
+    text-align: center;
+    padding: 3px 5px;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: nudista-web, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+   
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+background-color: #B10CFF;
+  border-color: #B10CFF;
+ color: white;
+}
+  
+/*  specific CSS for your menu*/
+div.nav-bar li.selected a { 
+background-color: #B10CFF;
+border-color: #B10CFF;
+color: white;
+} 
+
+
+
+.navbar-logo {
+  float: left;
+    vertical-align: top;
+    width: 150px;
+    height: 50px;
+    margin-left: 30px;
+  margin-top: 0px;
+  z-index:50000; 
+} 
+
+.navbar-logo-map {
+  float: left;
+    vertical-align: top;
+    width: 150px;
+    height: 50px;
+  margin-top: 0px;
+  z-index:50000; 
+  display: none;
+} 
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .navbar-logo-map {
+    width: 50%;
+    display:block; 
+  }
+} 
+  
+  
+.map-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%; 
+}
+
+#map {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.left-sidebar{
+    height: 100vh;
+    width: 20%;
+  min-width:250px; 
+    position: absolute;
+    opacity: 0.9;
+    left: 1px;
+    top: 0;
+    margin-top: 0px;
+    display: inline-block;
+    background-color: white;
+    padding: 20px;
+    font-size: 1.6em;
+    z-index: 20000;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .left-sidebar {
+    width: 50%;
+    display:none; 
+  }
+} 
+
+.layer-picker{
+position: absolute;
+right: 15px;
+top: 15px;
+z-index: 20000; 
+}
+
+.page-intro{
+  margin: 8em auto; 
+  z-index: 2000;
+  height: 100%;
+  width:70%; 
+  }
+
+@media screen and (max-width: 600px) {
+  .page-intro {
+    width: 85%;
+  }
+} 
+
+.o-que-fazer{
+  margin: 8em auto; 
+  margin-bottom: 4em;
+  z-index: 2000;
+  text-align: center;
+  width:70%; 
+  }
+
+@media screen and (max-width: 600px) {
+  .o-que-fazer{
+    width: 85%;
+  }
+} 
+
+.o-problema{
+  width:70%; 
+  margin: 8em auto; 
+  z-index: 2000;
+  text-align: center;
+  margin-bottom: 40px;
+  }
+
+@media screen and (max-width: 600px) {
+  .o-problema {
+    width: 85%;
+  }
+} 
+
+
+.secao-caixa{
+  margin: 0.6em auto; 
+  z-index: 2000;
+  text-align: center;
+  width: 70%; 
+  }
+
+@media screen and (max-width: 600px) {
+  .secao-caixa {
+    width: 100%;
+  }
+} 
+
+.problem-explain{
+  margin: 0.6em auto; 
+  z-index: 2000;
+  text-align: center;
+  min-height:800px; 
+  }
+
+.como-usar {
+  z-index: 2000;
+  text-align: center;
+  background-color: #B10CFF;
+  }
+
+.cidadao {
+  z-index: 2000;
+  text-align: left;
+  color: white;
+  padding: 1em;
+  }
+
+.org-comun {
+  z-index: 2000;
+  text-align: left;
+  color: white;
+  padding: 0.7em;
+  }
+
+.governo {
+  z-index: 2000;
+  text-align: left;
+  color: white;
+  padding: 1em;
+  padding-bottom: 2em; 
+  }
+
+.full {
+    padding-top: 5rem;
+    margin-left: 0;
+    margin-right: 0;
+}
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.with-btm-margin {
+    margin-top: 0;
+    margin-bottom: 48px;
+}
+
+
+
+.top-margin{
+    padding-top: 100px;
+  
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .top-margin{
+     padding-top: 0px;
+  }
+}
+
+.row-text {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.leadin-arrow-container {
+    width: 100%;
+}
+.leadin-arrow {
+    width: 80px;
+    height: 80px;
+    min-height: 80px;
+    min-width: 80px;
+    background-color: white;
+    opacity: 1;
+    margin: 0 auto;
+    margin-bottom: -40px;
+    margin-top: 60px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.container{
+  z-index: 3000;
+  text-align: left;
+  background-color: white;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top:2em;
+  padding-bottom:100px;
+}
+
+.container-pequeno{
+  z-index: 3000;
+  text-align: left;
+  background-color: white;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top:1em;
+}
+
+@media screen and (max-width: 600px) {
+  .container-pequeno {
+    padding-top:0.5em;
+     padding-bottom:0.5em;
+  }
+} 
+
+.container-brasilia{
+  z-index: 3000;
+  text-align: left;
+  background-color: white;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top:5em;
+  padding-bottom:100px;
+}
+
+.container-problema{
+  z-index: 3000;
+  text-align: center;
+  background-color: white;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top:.2em;
+}
+
+@media screen and (max-width: 600px) {
+  .container-problema {
+    width: 100%;
+  }
+} 
+
+.container-colabore{
+  z-index: 3000;
+  text-align: left;
+  background-color: white;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top:0;
+  padding-bottom:100px;
+}
+
+.container-problema-2{
+  z-index: 3000;
+  text-align: center;
+  background-color: white;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 60px;
+  padding-bottom: 15px;
+}
+
+.container-problema-3{
+  z-index: 3000;
+  text-align: left;
+  background-color: white;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 60px;
+  padding-bottom: 15px;
+}
+
+.purple {
+  background-color: #B10CFF;
+}
+
+.background-green {
+  background-color: #ce91ea;
+}
+
+.legislacao{
+  z-index: 2000;
+  text-align: center;
+  background-color: #B10CFF;
+  padding-top: 50px; 
+  }
+
+.container-saiba-direitos{
+  margin: 0.6em auto; 
+  z-index: 2000;
+  text-align: center;
+  width: 70%; 
+}
+
+@media screen and (max-width: 600px) {
+  .container-saiba-direitos {
+    width: 100%;
+  }
+} 
+
+.google-form{
+  margin: 0.6em auto; 
+  z-index: 2000;
+  text-align: center;
+  padding-top:1.2em;
+}
+
+@media screen and (max-width: 600px) {
+  .google-form {
+    width: 80%;
+    display: none; 
+  }
+} 
+
+.google-form-mobile{
+  margin: 0.6em auto; 
+  z-index: 2000;
+  text-align: center;
+  padding-top:1.2em;
+  display:none; 
+}
+
+@media screen and (max-width: 600px) {
+  .google-form-mobile {
+    width: 80%;
+    display: block; 
+  }
+} 
+
+.faca-voce-mesmo{
+  z-index: 3000;
+  text-align: center;
+  margin: .8em auto; 
+  width: 70%; 
+  }
+
+@media screen and (max-width: 600px) {
+  .faca-voce-mesmo {
+    width: 100%;
+  }
+} 
+
+.espaco-publico-titulo{
+  margin: 8em auto; 
+  z-index: 2000;
+  text-align: center;
+}
+
+.container-carnaval{
+  z-index: 3000;
+  text-align: left;
+  background-color: white;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top:100px;
+  padding-bottom:100px;
+}
+
+.container-como-organizar-carnaval {
+  display: block;
+}
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+.horta-urbana{
+  margin: 0.6em auto; 
+  z-index: 4000;
+   display: block; 
+}
+.bloco-carnaval{
+  margin: 0.6em auto; 
+  z-index: 4000;
+   display: block; 
+}
+
+.container-como-organizar{
+   display: block;
+}
+
+.container-img-back{
+  position: relative;
+  text-align: center;
+  top:50px; 
+}
+
+.container-text-img{
+  position: absolute; 
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center; 
+}
+
+.download-button {
+  text-align:left; 
+  width:4%; 
+  padding-top:.5em;  
+}
+
+.img-howto {
+ float: right; 
+width:35%; 
+z-index: 4000;
+margin: auto; 
+padding: 2em; 
+}
+
+.img-bloco{
+ float: left; 
+width:35%; 
+z-index: 4000;
+margin: auto; 
+padding: 2em; 
+}
+
+
+ /* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px; 
+}
+
+.column-3 {
+  float: left;
+  width: 33.3%;
+  padding: 10px; 
+}
+
+.column-4 {
+  float: left;
+  width: 25%;
+  padding: 10px; 
+}
+
+.column-mb{
+  float: left;
+  width: 50%;
+  padding: 10px; 
+  display:none; 
+}
+
+@media screen and (max-width: 600px) {
+  .column-mb {
+    width: 100%;
+    display:block; 
+  }
+} 
+
+.column-dis{
+  float: left;
+  width: 50%;
+  padding: 10px; 
+  display: block; 
+}
+
+@media screen and (max-width: 600px) {
+  .column-dis {
+    width: 100%;
+    display:none;  
+  }
+} 
+
+.menor {
+  padding-right:20px;
+  padding-left:20px; 
+}
+
+.row {
+  margin: 0.2em auto; 
+  z-index: 4000;
+   display: block; 
+  width:70%;
+}
+
+@media screen and (max-width: 600px) {
+  .row {
+    width: 100%;
+  }
+} 
+
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+   clear: both;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+} 
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column-3{
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column-3 {
+    width: 100%;
+  }
+} 
+
+.purple-border{
+  border-width: 4px;
+    border-style: solid;
+    border-color: #B10CFF;
+    padding: 10px;
+}
+
+.black-border{
+  border-width: 4px;
+    border-style: solid;
+    border-color: #000000;
+    padding: 10px;
+}
+
+.white-border{
+  border-width: 4px;
+    border-style: solid;
+    border-color: #ffffff;
+    padding: 10px;
+}
+
+.white-box{
+  background-color: #eee; 
+  padding: 15px; 
+}
+
+.mobile-initial{
+  width: 100%;
+  z-index: 30000;
+  display: none; 
+  background: white; 
+  position: absolute;
+top:0; 
+  padding:1em; 
+  padding-top:9em;
+  height: 100vh;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .mobile-initial {
+    display: block; 
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .mobile-initial {
+    display: block; 
+  }
+} 
+
+hr {
+    display: block;
+  width:100%; 
+    margin-before: 0.5em;
+    margin-after: 0.5em;
+    margin-start: auto;
+    margin-end: auto;
+    overflow: hidden;
+    border: .7px dashed #16fc73; 
+}
+
+.neighborhood-search{
+  font-family: 'Inconsolata', monospace;
+  color:deeppink;
+}
+.text{
+  font-family: 'Inconsolata', monospace;
+  color:deeppink;
+}
+  
+h1 {
+    display: block;
+    font-size: 2em;
+  font-family: nudista-web, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+  color: #B10CFF; 
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.lower-case {
+    text-transform: none;
+}
+
+.white {
+    display: block;
+    margin: .67em 0;
+    font-size: 2em;
+  font-family: nudista-web, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    color: white;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+ .text-center{
+    text-align: center; 
+}
+
+
+h2 {
+    display: block;
+    font-size: 1.6em;
+  font-family: nudista-web, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+  text-align: left; 
+  color: white; 
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+h3{
+  color:#b10cff;
+  font-family: nudista-web, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+  text-align:center;
+  font-size:13px;
+}  
+
+
+p{
+  font-family:'Inconsolata', monospace;
+  font-size:12px;
+}
+
+.title{
+  color:#B10CFF;
+  font-family:'Dosis', sans-serif;
+  font-size:40px;
+  font-weight:bold;
+  margin-top:0px;
+  text-transform: uppercase; 
+}  
+
+.title-commoning{
+  color:#b10cff;
+  font-family: nudista-web, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+  font-size:13px;
+}  
+
+.subtitle-commoning{
+  color:#b10cff;
+  font-family: nudista-web, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  font-size:0.5em;
+  line-height: 5px; 
+  margin-bottom: 5px;
+  margin-top: 20px;
+}  
+
+.subtitle-charact{
+  color:#FF7800;
+  font-family: nudista-web, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  font-size:12px;
+  margin-top:20px; 
+}  
+
+.subtitle-access{
+  color:#fe008b;
+  font-family: nudista-web, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  font-size:12px;
+  margin-top:20px; 
+}  
+.description{
+ font-family: nudista-web, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+  color: #B10CFF;
+}
+.intro-text{
+ font-family: nudista-web, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2em;
+  color: #B10CFF;
+  line-height: 1.5; 
+}
+
+.text-purple{
+ font-family: nudista-web, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.4em;
+  color: #B10CFF;
+  line-height: 1.5; 
+  text-align: center; 
+  padding: 1em; 
+}
+
+.intro-text-white{
+ font-family: nudista-web, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2em;
+  color: white;
+  line-height: 1.5; 
+  text-align: left; 
+}
+.como-organizar{
+  font-family : nudista-web, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size : 1em;
+  color : black;
+  text-align:left;
+  text-transform:uppercase;
+  margin-bottom:0px; 
+}
+
+.title-artigos{
+  font-family : nudista-web, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size : 1em;
+  color : #B10CFF;
+  text-align:left;
+  text-transform:uppercase;
+  margin-bottom:0px; 
+}
+
+.desc-artigos{
+  font-family : nudista-web, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size : .8em;
+  color : #B10CFF;
+  text-align:left;
+  margin-bottom:0px; 
+}
+
+.howto-comun{
+  font-family : nudista-web, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size : 1.4em;
+  color : white;
+  background-color:#16fc73;
+  display:inline;
+  text-align:left;
+  text-transform:uppercase;
+  margin-top:0px; 
+}
+
+.howto-cult{
+  font-family : nudista-web, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size : 1.4em;
+  color : white;
+  background-color:#fe008b;
+  display:inline;
+  text-align:left;
+  text-transform:uppercase;
+  margin-top:0px; 
+}
+
+.howto-urb{
+  font-family : nudista-web, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size : 1.4em;
+  color : white;
+  background-color:#B10CFF;
+  display:inline;
+  text-align:left;
+  text-transform:uppercase;
+  margin-top:0px; 
+}
+
+.howto-act{
+  font-family : nudista-web, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size : 1.4em;
+  color : white;
+  background-color:#FF7800;
+  display:inline;
+  text-align:left;
+  text-transform:uppercase;
+  margin-top:0px; 
+}
+
+.text-sm-white{
+ font-family: nudista-web, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+  color: white;
+  line-height: 1.5; 
+  text-align: left; 
+}
+
+.texto-sm-black{
+ font-family: nudista-web, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+  color: black;
+  line-height: 1.5; 
+  text-align: left; 
+}
+
+.texto-problema-gr{
+ font-family: nudista-web, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.3em;
+  color: #ffffff;
+  line-height: 1.2; 
+  text-align: center; 
+  margin-top:5px; 
+  margin-bottom:5px; 
+}
+
+.texto-problema{
+ font-family: nudista-web, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+  color: #ffffff;
+  line-height: 1.5; 
+  text-align: left; 
+}
+
+.caixa-alta {
+ font-family: nudista-web, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 0.9em;
+  color: #ffffff;
+  line-height: 1.5; 
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.law-text{
+ font-family:'Inconsolata', monospace;
+color: #b10cff;
+font-size: 1em;
+text-align: left;
+}
+
+.law-text-title{
+ font-family:'Inconsolata', monospace;
+color: #b10cff;
+font-size: 1.1em;
+text-align: left;
+text-transform: uppercase;
+}
+
+.with-highlight {
+    background-color: #16fc73;
+    display: inline;
+}
+
+.number-center{
+ font-family: nudista-web, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5em;
+  color: black;
+  line-height: 1.5; 
+  text-align: center; 
+}
+
+.texto-ep-titulo{
+  font-family : nudista-web, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size : 1.4em;
+  color : black;
+  background-color:white;
+  display:inline;
+  text-align:left;
+  text-transform:uppercase;
+  margin-top:0px; 
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .texto-ep-titulo {
+     text-align:center;
+    font-size : 1.5em;
+  }
+}
+
+.texto-in-mobile {
+    display: block;
+    font-size: 14px;
+    font-family:nudista-web, sans-serif;
+  font-weight: 400;
+    font-style: normal;
+    color: #b10cff;
+    text-align: center;
+    margin-top:0; 
+      padding-top: 2em; 
+      line-height: 1.5em;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+
+
+a{
+  font-weight: 600;
+  color: #B10CFF;
+}
+
+a:visited {
+font-weight: 600;
+color: #B10CFF;
+}
+
+a:hover{
+font-weight: 600;
+color: #FF7800;
+text-decoration-line: underline; 
+}
+a.link-intro {
+border-bottom: solid 1px; 
+}
+
+a.link-howto{
+  color: white; 
+}
+
+a.link-white{
+border-bottom: solid 1px; 
+  color: white; 
+}
+a.link-white:hover{
+border-bottom: solid 1px; 
+  color: black; 
+}
+
+a.link-orange{
+border-bottom: solid 1px; 
+color: #B10CFF;  
+}
+a.link-orange:hover{
+border-bottom: solid 1px; 
+  color: #ff7800; 
+}
+
+a.maisinfo{
+  font-size:1.1em; 
+  border-bottom: solid 1px; 
+}
+
+#map {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.people-picker {
+    font-family: 'Inconsolata', monospace;
+  color: #999; 
+}
+.action-picker {
+    font-family: nudista-web, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+   color: #999 
+}
+.space-picker {
+    font-family: nudista-web, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+   color: #999 
+}
+.time-picker {
+    font-family: nudista-web, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+   color: #999; 
+}
+
+.neighborhood-search{
+    font-family: nudista-web, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+   color: #b10cff; 
+}
+
+/* Customize the label (the container) */
+.container-orange {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-top: 5px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-family: nudista-web, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  font-size:0.5em;
+  color:#FF7800;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-orange input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark-orange {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width:15px;
+  background-color: white;
+  border: 2px solid #FF7800;
+  
+}
+
+/* On mouse-over, add an orange background color */
+.container-orange:hover input ~ .checkmark-orange {
+  background-color: #FF7800;
+}
+
+/* When the checkbox is checked, add an orange background */
+.container-orange input:checked ~ .checkmark-orange {
+  background-color: #FF7800;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark-orange:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-orange input:checked ~ .checkmark-orange:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-orange .checkmark-orange:after {
+  left: 4px;
+  top: 0px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Customize the label (the container) */
+.container-green{
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-top: 5px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-family: nudista-web, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  font-size:0.5em;
+  color:deeppink;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-green input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark-green {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width:15px;
+  background-color: white;
+  border: 2px solid #fe008b;
+  
+}
+
+/* On mouse-over, add an orange background color */
+.container-green:hover input ~ .checkmark-green {
+  background-color: #fe008b;
+}
+
+/* When the checkbox is checked, add an orange background */
+.container-green input:checked ~ .checkmark-green {
+  background-color: #fe008b;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark-green:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-green input:checked ~ .checkmark-green:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-green .checkmark-green:after {
+  left: 4px;
+  top: 0px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+  
+.leaflet-popup-content-wrapper {
+    padding: 1px;
+    text-align: left;
+    border-radius:0px;
+  }
+
+h7 {
+    display: block;
+    font-size: 13px;
+  font-family: nudista-web, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  text-transform: uppercase;
+  color: #b10cff; 
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.sidebar {
+  display: block;
+  background: #eee;
+  opacity: 0.9;
+  float: right;
+  padding: 10px;
+  margin: 15px; 
+  position: fixed; 
+  z-index: 10000; 
+  top: 50px; 
+  right: 5px;
+  background-color: white; 
+  box-shadow: 1px 1px 3px #9e9e9e; 
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+.sidebar-footer {
+  margin-top: 75px;
+}
+
+.sidebar-feature-content {
+    font-size: 12px;
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    color: black;
+    margin-top:0; 
+    display: block; 
+    width: 250px;
+   
+}
+
+.sidebar-content {
+  display:block;
+   width: 250px;
+}
+
+.sidebar-button {
+    border: none;
+    background: white;
+    right: 10px; 
+}
+
+
+
+img {
+    width: 100%;
+}
+
+.pag-grande{
+padding: 3em; 
+width: 50%;
+}
+
+.img-column{
+display: block;
+max-width: 100%;
+height: auto;
+margin: 0 auto;
+}
+
+.img-prob-sm{
+    width: 70%;
+  text-align: center;  
+}
+
+.img-column-center{
+max-width: 100%;
+height: auto;
+margin: 0 auto;
+vertical-align: middle;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .img-column-center {
+    padding-top: 3em;  
+    padding-bottom: 1.8em; 
+  }
+} 
+
+.center{
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 90%;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .center {
+  width: 100%;
+  }
+} 
+
+.responsive {
+  width: 100%;
+  height: auto;
+  padding: 0; 
+}
+
+.img-back{
+  position: absolute; 
+  text-align: center;
+  margin: auto; 
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .img-back{
+    display:none; 
+  }
+} 
+
+.faca-voce-mesmo{
+  width: 70%;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .faca-voce-mesmo{
+    width: 100%;
+  }
+} 
+
+
+h4 {
+    display: block;
+    font-size: 12px;
+    font-family:nudista-web, sans-serif;
+  font-weight: 400;
+    font-style: normal;
+    color: #b10cff;
+    text-align: center;
+    margin-top:0; 
+      line-height: 2em;
+}
+
+
+h5 {
+    display: block;
+    font-size: 12px;
+    font-family:nudista-web, sans-serif;
+  font-weight: 400;
+    font-style: normal;
+ color: #b10cff;
+    text-align: left;
+    margin-top:1px; 
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+h6 {
+    display: block;
+    font-size: 12px;
+    font-family:'Inconsolata', monospace;
+    font-weight: bold;
+    color: deeppink;
+    text-align: left;
+    margin-top:2px; 
+    line-height: 1.2;
+}
+
+h8 {
+    display: block;
+    font-size: 20px;
+    font-family: 'Dosis', monospace;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #B10CFF;
+    margin-top:0; 
+   
+}
+
+h9 {
+    display: block;
+    font-size: 13px;
+  font-family: nudista-web, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  text-transform: uppercase;
+    color: #16fc73;
+    text-align: center;
+    margin-top:0; 
+}
+
+h10 {
+    display: block;
+    font-size: 13px;
+  font-family: nudista-web, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  text-transform: uppercase;
+    color: #FE008B;
+    text-align: center;
+    margin-top:0; 
+   }
+
+h11 {
+    display: block;
+    font-size: 12px;
+    font-family:nudista-web, sans-serif;
+  font-weight: 400;
+    font-style: normal;
+    color: #FE008B;
+    text-align: center;
+    margin-top:0; 
+      line-height: 2em;
+}
+
+
+
+.panel-close, .panel-close:focus, .panel-close:hover, .panel-closeactive {
+    color: #FF7800;
+    text-decoration: none;
+}
+.panel-close {
+    display: inline-block;
+    float: right;
+    font-size: 32px;
+    line-height: 32px;
+    height: 32px;
+    width: 32px;
+    color: #B10CFF;
+}
+.btn-add, .panel-close {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+}
+.btn-add div, .legend-help, .panel-close {
+    text-align: center;
+}
+
+.title-box {
+  width:300px;
+  float: left;
+  margin-left:20px;
+  margin-top: 30px;
+  border:0px;
+}
+
+.page-title {
+  color:#FF7800;
+  font-family:'Dosis', sans-serif;
+  font-size:20px;
+  font-weight:bold;
+  margin-top:20px;
+  text-transform: uppercase; 
+  width:500px;
+}
+
+.about-description{
+width:500px}
+
+.publication {
+position: absolute;
+left:600px; 
+margin-top:100px;
+}
+
+a:link {
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+.legend-income {
+display: none;
+width: 60%;
+margin-top: 30px;
+}
+
+.legend-density{
+  display: none;
+  width: 60%;
+  margin-top: 30px;
+}
+
+.legend-race{
+  display: none;
+  width: 60%;
+  margin-top: 30px;
+}
+
+.legend-access {
+  display: none;
+  width: 60%;
+  margin-top: 20px;
+}
+
+.legend-landuse {
+  display: none;
+  width: 60%;
+  margin-top: 20px;
+}
+.legend-lazer {
+  display: none;
+  width: 90%;
+  margin-top: 20px;
+}
+.panel-close{
+  cursor: pointer;
+}
+
+.attributions{
+  color:black;
+  font-family:'Inconsolata', monospace;
+  font-size:12px;
+  margin-top:30px;
+  
+}
+
+.calendar{
+margin-top:30px;
+  width:75%;
+}
+
+.logo{
+  margin-top:0;
+  width:75%;
+}
+
+.left-sidebar-content{
+  margin-top:0; 
+}
+
+.download-buttons{
+margin-top:30px;
+}
+
+.howto-carnival-button{
+    background-color: white; 
+    border: 2px solid deeppink;
+    color: deeppink;
+    padding: 5px 7px;
+   display:block; 
+  font-family: 'Inconsolata', monospace;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.howto-garden-button{
+    background-color: white; 
+    border: 2px solid #16FC73;
+    color: #16FC73;
+    padding: 5px 7px;
+    display: block; 
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+  margin-top:9px;
+}
+
+.howto-walk-button{
+   background-color: white; 
+    border: 2px solid #B10CFF;
+    color: #B10CFF;
+    padding: 5px 7px;
+    display: block; 
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+  margin-top:9px;
+}
+
+.legend-people{
+display: block;
+margin-top:30px;
+width:60%;
+}
+
+.howto-image{
+position: absolute;
+text-align: center; 
+width: 50%; 
+}
+
+.english-button{
+  position: absolute;
+  right:100px; 
+}
+
+.license{
+  padding: 50px; 
+  width:20px;
+  margin-left:20px;
+  margin-top:50px;
+  border:20px;
+}
+
+#more {display: none;}
+
+[class^="icon"] {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  top: 15px;
+  margin-right: 10px;
+  fill: deeppink;
+}
+
+/* Reposition the music note icon */
+.icon-search {
+  right: 5px;
+}
+
+.nav-bar .icon {
+  display: none;
+}
+
+
+.menu-toggle {
+    color: #b10cff;
+    float: right;
+    padding: 10px 20px;
+    font-size: 17px;
+    line-height: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Header Nav Menu Mobile */
+@media only screen and (max-width: 991px) {
+
+     .menu-toggle {
+      display: block;
+     }
+     .p-menu nav {
+      background-color: #fff;
+      width: 80%;
+      height: 100%;
+      right:100%; 
+      top:0;
+      position:fixed;
+      overflow:scroll;
+      }
+     .p-menu nav.active{
+      width: 172%;
+      left: -72%;
+      margin-top: 12px;
+     }
+     .p-menu nav ul {
+      display: block;
+      text-align: left;
+     }
+     .p-menu nav ul li {
+      float: none;
+     }
+     .p-menu nav ul li a {
+        display: block;
+        padding: 10px 20px;
+     }
+     .p-menu nav ul > li > ul, .p-menu nav ul > li > ul > li > ul {
+      opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      visibility: hidden;
+      -webkit-transition: .5s;
+      transition: .5s;
+    display: none;
+  }
+   .p-menu nav ul > li:hover ul, .p-menu nav ul > li > ul > li:hover > ul {
+      opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    visibility: visible;
+      background-color: rgba(0, 62, 111, 0.4);
+      display: block;
+  }
+   .p-menu nav ul li:before {
+        top:0px;
+    }
+     .p-menu nav ul li:hover ul, .p-menu nav > ul > li > ul > li:hover ul {
+      position: relative;
+     }
+     .p-menu nav ul li ul li {
+      width: 100%;
+     }
+     .p-menu nav ul li ul li a {
+      width: 90%;
+      border-bottom: 1px solid rgba(0,0,0, 0.3);
+     }
+
+    .p-menu nav > ul > li:before {
+      width: 10%;
+      border-bottom: 1px solid rgba(0,0,0, 0.3);
+      right: 0px;
+      padding-left: 10px;
+    }
+
+    .p-menu nav ul > li > ul > li > ul {
+        left:0;
+        top: 0;
+    }
+    .p-menu nav ul > li > ul > li > ul > li > ul {
+        left: 0;
+    }
+
+}
